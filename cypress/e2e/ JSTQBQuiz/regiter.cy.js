@@ -142,7 +142,7 @@ describe('登録画面テスト', () => {
 
     it('テストID19(不正文字)', () => {
         cy.get('input[name="name"]').type('あ')
-        cy.get('input[name="email"]').type('cc@cc')
+        cy.get('input[name="email"]').type('aaaa@test')
         cy.get('input[name="password"]').type('0Jw3XhCSB408rKdEMJxC')
         cy.get('button').contains('登録').click()
         cy.contains('そのメールアドレスはすでに使われています').should('be.visible');
