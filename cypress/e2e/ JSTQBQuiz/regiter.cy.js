@@ -215,7 +215,7 @@ describe('登録画面テスト', () => {
         cy.contains('<h1>あ</h1>').should('be.visible');
     });
 
-    it.only('テストID26(SQLインジェクション)', () => {
+    it('テストID26(SQLインジェクション)', () => {
         // ランダムな文字列生成（簡易）
         const randomStr = Math.random().toString(36).substring(2, 8);
         const testName = `' OR 1=1 '`;
@@ -237,7 +237,7 @@ describe('登録画面テスト', () => {
         cy.contains("' OR 1=1 '").should('be.visible');
     });
 
-    it.only('テストID27(不正文字)', () => {
+    it('テストID27(不正文字)', () => {
         // ランダムな文字列生成（簡易）
         const randomStr = Math.random().toString(36).substring(2, 8);
         const testName = `${randomStr}`;
